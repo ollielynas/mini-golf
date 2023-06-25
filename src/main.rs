@@ -9,7 +9,7 @@ fn main() -> eframe::Result<()> {
     let native_options = eframe::NativeOptions::default();
     
     eframe::run_native(
-        "eframe template",
+        "mini_golf",
         native_options,
         Box::new(|cc| Box::new(mini_golf::App::new(cc))),
     )
@@ -22,6 +22,7 @@ fn main() {
     eframe::WebLogger::init(log::LevelFilter::Debug).ok();
 
     let web_options = eframe::WebOptions::default();
+    
     
     wasm_bindgen_futures::spawn_local(async {
         eframe::WebRunner::new()
